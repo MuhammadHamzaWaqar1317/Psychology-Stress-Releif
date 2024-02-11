@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('young.webp') center center fixed;
+            background-size: cover;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        label {
+            display: block;
+            margin: 10px 0 5px;
+            color: #555;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+<form>
+    <h2>Login</h2>
+    <label for="Username">Email:</label>
+    <input type="text" id="Username" name="Username" required>
+	
+
+    <label for="password">Password:</label>
+    <input type="password" id="Password" name="password" required>
+
+    <button type="submit" id="btn_click">Login</button>
+</form>
+
+<script>
+    document.getElementById('btn_click').addEventListener('click',function(ev){
+         //   alert("dgsff")
+        ev.preventDefault()
+        let newObj={
+            UserName:document.getElementById('Username').value,
+            Password:document.getElementById('Password').value
+        }
+        
+        
+        let retrievedJsonString = localStorage.getItem('userdata');
+        let Database_obj=JSON.parse(retrievedJsonString)
+        //console.log(tt[1])
+        //let Append_Data=[]
+        for (const iterator of Database_obj) {
+            if (newObj.UserName==iterator.UserName && newObj.Password==iterator.Password) {
+                window.location.replace("checkk.html")
+                return
+            }
+            if (newObj.UserName==iterator.Email && newObj.Password==iterator.Password) {
+                window.location.replace("checkk.html")
+                return
+            }
+           // Append_Data.push(iterator)
+        }
+        alert("Incorrect Username or Password")
+     //   Append_Data.push(newObj)
+     
+        
+        //localStorage.setItem('userdata',JSON.stringify(Append_Data))
+        //let asrr=JSON.parse(localStorage.getItem('userdata'))
+        //console.log(arr.length)
+        //window.location.replace("Register.html")
+        })
+
+</script>
+
+
+
+</body>
+</html>

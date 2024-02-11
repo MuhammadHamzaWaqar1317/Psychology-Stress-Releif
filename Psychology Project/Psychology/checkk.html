@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SUKOON MASKAN</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #333;
+        }
+
+        header {
+            /*background-color: #333;*/
+            color: #fff;
+            padding: 4em 0;
+            text-align: center;
+			background: url('rocks.jpg') center center fixed;
+        }
+
+        section {
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        .yoga-type {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .yoga-type img {
+            width: 500px;
+            height: 500px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-top: 10px;
+        }
+
+        p {
+            color: #555;
+        }
+		 nav {
+            background-color: #444;
+            color: #fff;
+            padding: 0.8em;
+            text-align: center;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #fff;
+            padding: 1em;
+            margin: 1em;
+        }
+		footer {
+            background-color: #333;
+            color: #fff;
+            padding: 1em 0;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>SUKOON!!!</h1>
+</header>
+ <nav>
+        <a href="checkk.html">Home</a>
+        <!-- <p onclick="func()">Home</p> -->
+        <!-- <button id="btn_click">Home</button> -->
+        <!-- <a href="checkk.html">Classes</a> -->
+        <a href="questionairre.html">Consult a Professional</a>
+		<a href="test.html">BMI Calculator</a>
+		<a id="btn_click">Log Out</a>
+</nav>
+
+<section>
+    <div class="yoga-type">
+	<h2>Hatha Yoga</h2>
+        <center><a href="hatha.html"><img src="hatha.jpg" alt="Hatha Yoga"></a></center>
+		<p>Hatha yoga is a traditional form of yoga that focuses on physical postures and breath control.</p>
+		<div class="yoga-type">
+		<h2>Vinyasa Flow</h2>
+        <center><a href="vinyasa.html"><img src="vinyasa.jpg" alt="Vinyasa Flow"></a></center>
+		<p>Vinyasa flow yoga emphasizes the coordination of movement and breath in a continuous flow.</p>
+	
+        </div>
+
+    </div>
+
+    
+    <div class="yoga-type">
+        <h2>Power Yoga</h2>
+        <center><a href="power.html"><img src="power.jpg" alt="Power Yoga"></a></center>
+        <p>Power yoga is a dynamic and intense form of yoga that combines strength, flexibility, and cardio.</p>
+    </div>
+	<div class="yoga-type">
+        <h2>Restorative Yoga</h2>
+        <center><a href="rest.html"><img src="resto.jpeg" alt="Power Yoga"></a></center>
+        <p>Restorative yoga enables deep relaxation as you holding poses for longer periods of time with the help of props to completely support you.</p>
+    </div>
+    </section>
+<footer>
+        &copy; 2023 Sukoon.com. All rights reserved.
+    </footer>
+</body>
+
+<script>
+
+
+
+
+
+document.getElementById('btn_click').addEventListener('click',function(ev){
+      alert("asddas")
+    let option=confirm("Do you want to log out")
+      if (option) {
+        window.location.replace("form.html")
+      }
+     
+  })
+
+    
+</script>
+
+</html>
